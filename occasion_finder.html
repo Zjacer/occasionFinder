@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="occasionProvider">
     <head>
         <title>Occasion Finder</title>
         <meta charset="utf-8">
@@ -7,39 +7,14 @@
         <meta name="author" content="Mateusz Zajac, Daniel Was">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="libs/angular.min.js"></script>
+        <script src="tableComponent.js"></script>
     </head>
     <body>
         <div class="container">
             <h1>OCCASION FINDER</h1>
 
-            <table border=2 class="table table-striped" ng-app="itemGatherer" ng-controller="_gatherer">
-                <tr>
-                    <th>Item image</th>
-                    <th>Item name</th>
-                    <th>Date</th>
-                    <th>Price</th>
-                    <th>Price after reduction</th>
-                    <th>Link to shop (or item)</th>
-                </tr>
-
-                <tr ng-repeat="item in items">
-                    <td><img src="{{item.image}}"></img></td>
-                    <td>{{item.name}}</td>
-                    <td>{{item.date}}</td>
-                    <td>{{item.price}} PLN</td>
-                    <td>{{item.priceAfterReduction}} PLN</td>
-                    <td><a href="http://x-kom.pl/"><img src="res/logo_x-kom.jpg"></a></img></td>
-                </tr>
-            </table>
+            <table-data></table-data>
+            
         </div>
-
-        <script>
-            items = angular.module('itemGatherer', []);
-            items.controller('_gatherer', function ($scope, $http) {
-                $http.get("items.json").then( function (response) {
-                    $scope.items = response.data.storeOccasions;
-                });
-            });
-        </script>
     </body>
 </html>
