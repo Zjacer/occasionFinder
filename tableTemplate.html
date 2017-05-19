@@ -1,0 +1,19 @@
+<table border=2 class="table table-striped" ng-controller="_xkomdata">
+    <tr>
+        <th>Item image</th>
+        <th>Item name</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Price after reduction</th>
+        <th>Link to shop (or item)</th>
+    </tr>
+    <!-- <tr ng-repeat="item in items"> -->
+    <tr>
+        <td><img src="{{xkomData.results.img.src}}"></img></td>
+        <td>{{xkomData.results.img.alt}}</td>
+        <td>{{xkomData.created}}</td>
+        <td>{{xkomData.results.img.alt}} PLN</td>
+        <td>{{xkomData.results.img.alt}} PLN</td>
+        <td><a href="http://x-kom.pl/"><img src="res/logo_x-kom.jpg"></a></img></td>
+    </tr>
+</table>
