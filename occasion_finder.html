@@ -14,17 +14,21 @@
 
             <table border=2 class="table table-striped" ng-app="itemGatherer" ng-controller="_gatherer">
                 <tr>
+                    <th>Item image</th>
                     <th>Item name</th>
                     <th>Date</th>
                     <th>Price</th>
                     <th>Price after reduction</th>
+                    <th>Link to shop (or item)</th>
                 </tr>
-                
+
                 <tr ng-repeat="item in items">
+                    <td><img src="{{item.image}}"></img></td>
                     <td>{{item.name}}</td>
                     <td>{{item.date}}</td>
-                    <td>{{item.price}}</td>
-                    <td>{{item.priceAfterReduction}}</td>
+                    <td>{{item.price}} PLN</td>
+                    <td>{{item.priceAfterReduction}} PLN</td>
+                    <td><a href="http://x-kom.pl/"><img src="res/logo_x-kom.jpg"></a></img></td>
                 </tr>
             </table>
         </div>
