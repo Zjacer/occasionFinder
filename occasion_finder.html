@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Occasion Finder</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Occasion finder for students">
+        <meta name="author" content="Mateusz Zajac, Daniel Was">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="libs/angular.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>OCCASION FINDER</h1>
+
+            <table border=2 class="table table-striped" ng-app="itemGatherer" ng-controller="_gatherer">
+                <tr>
+                    <th>Item name</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Price after reduction</th>
+                </tr>
+                
+                <tr ng-repeat="item in items">
+                    <td>{{item.name}}</td>
+                    <td>{{item.date}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.priceAfterReduction}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            items = angular.module('itemGatherer', []);
+            items.controller('_gatherer', function ($scope, $http) {
+                $http.get("items.json").then( function (response) {
+                    $scope.items = response.data.storeOccasions;
+                });
+            });
+        </script>
+    </body>
+</html>
