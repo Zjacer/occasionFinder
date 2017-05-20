@@ -25,13 +25,13 @@
         <td>{{altoArrayData[4]}} PLN</td>
     </tr>
 
-    <tr ng-controller="_moreledata">
-        <td><center></img><img src="{{moreleArrayData[0]}}"></img><center></td>   
-        <td>{{moreleArrayData[1]}}
+    <tr ng-controller="moreleController">
+        <td><center></img><img src="{{moreleModel.ItemSrc}}"></img><center></td>   
+        <td>{{moreleModel.ItemName}}
              <a href="https://www.morele.net/"><img src="res/logo_morele.jpg"></a><center></td>
-        <td>{{moreleArrayData[2]}}</td>
-        <td>{{moreleArrayData[3]}} PLN</td>
-        <td>{{moreleArrayData[4]}} PLN</td>
+        <td></td>
+        <td>{{moreleModel.OldPrice}} PLN</td>
+        <td>{{moreleModel.NewPrice}} PLN</td>
     </tr>
 
     <tr ng-controller="_rtveuroagddata">

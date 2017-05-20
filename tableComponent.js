@@ -89,13 +89,37 @@ altoData.controller('_altodata', function($scope, $http) {
     });
 });
 
-// MORELE SHOP - Ja
-//moreleData = angular.module('occasionProvider');
-//moreleData.controller('_moreledata', function($scope, $http) {
-//    $scope.moreleArrayData = new Array(5);
+moreleData = angular.module('occasionProvider');
+moreleData.controller('moreleController', function($scope, $http) {
+	
+    $http({
+		method: "GET",
+		// select * from html where url='http://morele.net' and xpath='//div[contains(@class, "top-wrap")]/div[contains(@class, "row")]'
+		url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fmorele.net'%20and%20xpath%3D'%2F%2Fdiv%5Bcontains(%40class%2C%20%22top-wrap%22)%5D%2Fdiv%5Bcontains(%40class%2C%20%22row%22)%5D'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"
+	}).then(function(result){ 
+		var imgModel = result.data.query.results.div.div[0].div.a;
+		var productModel = result.data.query.results.div.div[1];
+		var productName = productModel.div[0];
+		var productDescription = productModel.div[1];
+		var productPrice = productModel.div[2].div;
+		
+		var startIndexUrl = imgModel.style.indexOf("https");
+		var endIndexUrl = imgModel.style.indexOf("jpg") + 3;
+		
+		
+		$scope.moreleModel = {
+			ItemSrc: imgModel.style.substring(startIndexUrl,endIndexUrl),
+			ItemName: productName.a.title,
+			OldPrice: productPrice.div[0].span,
+			NewPrice: productPrice.div[1].span
+		};
+		console.log($scope.moreleModel);
+	});
+});
     
     
-// KOMPUTRONIK SHOP - Dla Wasia, masz tu juz zalazek
+ //KOMPUTRONIK SHOP - Dla Wasia, masz tu juz zalazek
+
 //komputronikData = angular.module('occasionProvider');
 //komputronikData.controller('_moreledata', function($scope, $http) {
 //    $scope.moreleArrayData = new Array(5);
