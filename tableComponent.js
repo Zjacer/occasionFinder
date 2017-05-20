@@ -110,15 +110,14 @@ moreleData.controller('moreleController', function($scope, $http) {
 		$scope.moreleModel = {
 			ItemSrc: imgModel.style.substring(startIndexUrl,endIndexUrl),
 			ItemName: productName.a.title,
+			ItemLink: productName.a.href,
 			OldPrice: productPrice.div[0].span,
 			NewPrice: productPrice.div[1].span
 		};
-		console.log($scope.moreleModel);
 	});
 });
     
     
- //KOMPUTRONIK SHOP - Dla Wasia, masz tu juz zalazek
 
 //komputronikData = angular.module('occasionProvider');
 //komputronikData.controller('_moreledata', function($scope, $http) {
