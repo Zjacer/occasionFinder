@@ -2,7 +2,6 @@
     <tr>
         <th>Item image</th>
         <th>Item name</th>
-        <th>Ending time</th>
         <th>Old price</th>
         <th>New price</th>
     </tr>
@@ -11,44 +10,23 @@
         <td><center></img><img src="{{xkomArrayData[0]}}"></img><center></td>
         <td>{{xkomArrayData[1]}}
             <br><center><a href="https://x-kom.pl/"><img src="res/logo_xkom.jpg"></a><center></td>
-        <td>{{xkomArrayData[2]}}</td>
+        <td>{{xkomArrayData[2]}} PLN</td>
         <td>{{xkomArrayData[3]}} PLN</td>
-        <td>{{xkomArrayData[4]}} PLN</td>
     </tr>
     
     <tr ng-controller="_altodata">
         <td><center></img><img src="{{altoArrayData[0]}}"></img><center></td>   
         <td>{{altoArrayData[1]}}
             <br><center><a href="https://al.to"><img src="res/logo_alto.jpg"></a><center></td>
-        <td>{{altoArrayData[2]}}</td>
+        <td>{{altoArrayData[2]}} PLN</td>
         <td>{{altoArrayData[3]}} PLN</td>
-        <td>{{altoArrayData[4]}} PLN</td>
     </tr>
 
     <tr ng-controller="moreleController">
         <td><center></img><a href="{{moreleModel.ItemLink}}"><img src="{{moreleModel.ItemSrc}}"></img></a><center></td>   
         <td>{{moreleModel.ItemName}}
-             <a href="https://www.morele.net/"><img src="res/logo_morele.jpg"></a><center></td>
-        <td></td>
+             <br><a href="https://www.morele.net/"><img src="res/logo_morele.jpg"></a><center></td>
         <td>{{moreleModel.OldPrice}} PLN</td>
         <td>{{moreleModel.NewPrice}} PLN</td>
-    </tr>
-
-    <tr ng-controller="_rtveuroagddata">
-        <td><center></img><img src="{{rtveuroagdArrayData[0]}}"></img><center></td>   
-        <td>{{rtveuroagdArrayData[1]}}
-            <br><center><a href="http://www.euro.com.pl/"><img src="res/logo_rtveuroagd.jpg"></a><center></td>
-        <td>{{rtveuroagdArrayData[2]}}</td>
-        <td>{{rtveuroagdArrayData[3]}} PLN</td>
-        <td>{{rtveuroagdArrayData[4]}} PLN</td>
-    </tr>
-    
-    <tr ng-controller="_komputronikdata">
-        <td><center></img><img src="{{komputronikArrayData[0]}}"></img><center></td>   
-        <td>{{komputronikArrayData[1]}}
-            <br><center><a href="https://www.komputronik.pl/"><img src="res/logo_komputronik.jpg"></a><center></td>
-        <td>{{komputronikArrayData[2]}}</td>
-        <td>{{komputronikArrayData[3]}} PLN</td>
-        <td>{{komputronikArrayData[4]}} PLN</td>
     </tr>
 </table>
