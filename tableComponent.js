@@ -6,7 +6,13 @@ function returnsth() {
     return (nowTime - 36000 > 79200 - nowTime) ? "10:00" : "22:00";
 }
 
-xkomData = angular.module('occasionProvider', []);
+xkomModule = angular.module('occasionProvider', []);
+    xkomModule.component('tableData', {
+        templateUrl: 'tableTemplate.html'
+});
+
+// x-kom.pl shop
+xkomData = angular.module('occasionProvider');
 // TODO: merge xpath conditions
 xkomData.controller('_xkomdata', function($scope, $http) {
     $scope.xkomArrayData = new Array(5);
@@ -44,8 +50,5 @@ xkomData.controller('_xkomdata', function($scope, $http) {
     });
 });
 
-
-xkomModule = angular.module('occasionProvider');
-    xkomModule.component('tableData', {
-        templateUrl: 'tableTemplate.html'
-});
+// al.to shop
+altoData = angular.module('occasionProvider');
