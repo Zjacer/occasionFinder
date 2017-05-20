@@ -2,17 +2,17 @@
     <tr>
         <th>Item image</th>
         <th>Item name</th>
-        <th>Date</th>
-        <th>Price</th>
-        <th>Price after reduction</th>
+        <th>Ending time</th>
+        <th>Old price</th>
+        <th>New price</th>
     </tr>
     <!-- <tr ng-repeat="item in items"> -->
     <tr>
         <td><center><a href="http://x-kom.pl/"><img src="res/logo_x-kom.jpg"></a><center></img>
-            <br><img src="{{xkomData.results.img.src}}"></img></td>
-        <td>{{xkomData.results.img.alt}}</td>
-        <td>{{xkomData.created}}</td>
-        <td>missing price here! PLN</td>
-        <td>missing price here! PLN</td>
+                    <br><img src="{{xkomArrayData[0]}}"></img></td>
+        <td>{{xkomArrayData[1]}}</td>
+        <td>{{xkomArrayData[2]}}</td>
+        <td>{{xkomArrayData[3]}} PLN</td>
+        <td>{{xkomArrayData[4]}} PLN</td>
     </tr>
 </table>

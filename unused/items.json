@@ -1,0 +1,32 @@
+{
+  "storeOccasions": [
+    {
+      "image": "http://podforak.rzeszow.pl/upload/nie_robie.jpg",
+      "name": "Sluchawki",
+      "date": "May 2017",
+      "price": "499",
+      "priceAfterReduction": "399"
+    },
+    {
+      "image": "http://podforak.rzeszow.pl/upload/nie_robie.jpg",
+      "name": "Glosniki",
+      "date": "May 2017",
+      "price": "245",
+      "priceAfterReduction": "222"
+    },
+    {
+      "image": "http://podforak.rzeszow.pl/upload/nie_robie.jpg",
+      "name": "Monitor",
+      "date": "May 2017",
+      "price": "124",
+      "priceAfterReduction": "42"
+    },
+    {
+      "image": "http://podforak.rzeszow.pl/upload/nie_robie.jpg",
+      "name": "Komputer",
+      "date": "May 2017",
+      "price": "4994",
+      "priceAfterReduction": "3994"
+    }
+  ]
+}
