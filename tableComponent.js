@@ -1,7 +1,7 @@
 function calculateReduction(originalPrice, reducedPrice) {
     originalPrice = Number(originalPrice.replace(/[^0-9\.]+/g, ""));
     reducedPrice = Number(reducedPrice.replace(/[^0-9\.]+/g, ""));
-    return Math.floor(100 - ((reducedPrice * 100) / originalPrice));
+    return (originalPrice - reducedPrice) / 100;
 }
 
 /* ARRAY DATA STRUCTURE
@@ -9,7 +9,7 @@ function calculateReduction(originalPrice, reducedPrice) {
 [1] - item name
 [2] - item price
 [3] - item price after reduction
-[4] - % reduction
+[4] - reduction
 [5] - item url
 */
 
@@ -62,7 +62,8 @@ moreleData.controller('moreleController', function($scope, $http) {
 			ItemName: productName.a.title,
 			ItemLink: productName.a.href,
 			OldPrice: productPrice.div[0].span,
-			NewPrice: productPrice.div[1].span
+			NewPrice: productPrice.div[1].span,
+			Save: calculateReduction(productPrice.div[0].span, productPrice.div[1].span)
 		};
 	});
 });
