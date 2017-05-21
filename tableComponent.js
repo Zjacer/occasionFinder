@@ -9,6 +9,7 @@ function calculateReduction(originalPrice, reducedPrice) {
 [1] - item name
 [2] - item price
 [3] - item price after reduction
+[4] - % reduction
 */
 
 xkomModule = angular.module('occasionProvider', []);
