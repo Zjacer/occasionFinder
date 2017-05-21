@@ -18,7 +18,7 @@ function calculateReduction(originalPrice, reducedPrice) {
 
 xkomModule = angular.module('occasionProvider', []);
     xkomModule.component('tableData', {
-        templateUrl: 'tableTemplate.html'
+        templateUrl: 'app/tableTemplate.html'
 });
 
 // X-KOM.PL
