@@ -8,29 +8,38 @@
     </tr>
     
     <tr ng-controller="xkomController">
-        <td><center><a href="https://x-kom.pl/"><img src="res/logo_xkom.jpg"></a><center></td>
-        <td>{{xkomArrayData[1]}}<br><br>
-            <center></img><img src="{{xkomArrayData[0]}}"></img><center></td>
+        <td><center><a href="https://x-kom.pl/"><img src="res/logo_xkom.jpg"></img></a></center></td>
+        <td><center>{{xkomArrayData[1]}}<br><br>
+            <img src="{{xkomArrayData[0]}}"></img></center></td>
         <td>{{xkomArrayData[2]}} PLN</td>
         <td>{{xkomArrayData[3]}} PLN</td>
         <td>{{xkomArrayData[4]}} %</td>
     </tr>
     
     <tr ng-controller="moreleController">
-        <td><a href="https://www.morele.net/"><img src="res/logo_morele.jpg"></a><center></td>
-        <td>{{moreleModel.ItemName}}<br><br>
-            <center></img><a href="{{moreleModel.ItemLink}}"><img src="{{moreleModel.ItemSrc}}"></img></a><center></td>   
+        <td><center><a href="https://www.morele.net/"><img src="res/logo_morele.jpg"></img></a></center></td>
+        <td><center>{{moreleModel.ItemName}}<br><br>
+            <img src="{{moreleModel.ItemSrc}}"></a></center></td>   
         <td>{{moreleModel.OldPrice}} PLN</td>
         <td>{{moreleModel.NewPrice}} PLN</td>
         <td>TODO</td>
     </tr>
     
     <tr ng-controller="altoController">
-        <td><center><a href="https://al.to"><img src="res/logo_alto.jpg"></a><center></td>
-        <td>{{altoArrayData[1]}}<br><br>
-            <center></img><img src="{{altoArrayData[0]}}"></img><center></td>   
+        <td><center><a href="https://al.to"><img src="res/logo_alto.jpg"></img></a></center></td>
+        <td><center>{{altoArrayData[1]}}<br><br>
+            <img src="{{altoArrayData[0]}}"></img><center></td>   
         <td>{{altoArrayData[2]}} PLN</td>
         <td>{{altoArrayData[3]}} PLN</td>
         <td>{{altoArrayData[4]}} %</td>
+    </tr>
+    
+    <tr ng-controller="amforaController">
+        <td><center><a href="https://www.amfora.pl/"><img src="res/logo_amfora.jpg"></img></a></center></td>
+        <td><center>{{amforaArrayData[1]}}<br><br>
+            <img src="{{amforaArrayData[0]}}"></img></center></td>   
+        <td>{{amforaArrayData[2]}} PLN</td>
+        <td>{{amforaArrayData[3]}} PLN</td>
+        <td>{{amforaArrayData[4]}} %</td>
     </tr>
 </table>
