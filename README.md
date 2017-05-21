@@ -25,4 +25,4 @@ Dodatkowym narzędziem, o które opiera się aplikacja jest: https://developer.y
 
 # [](#header-1)Podręcznik użytkowania
 
-Ze względu na intuicyjność użytkowania aplikacji (jedyną interakcją użytkownika jest kliknięcie na przycisk przenoszący do strony sklepu) tworzenie podręcznika użytkownika nie było potrzebne.
+Ze względu na intuicyjność użytkowania aplikacji (jedyną interakcją użytkownika jest kliknięcie na logo przenoszące do strony sklepu, bądź przycisk przenoszący do przecenionego przedmiotu) tworzenie podręcznika użytkownika nie było potrzebne.
