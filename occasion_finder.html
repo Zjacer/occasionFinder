@@ -8,10 +8,27 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="libs/angular.min.js"></script>
         <script src="tableComponent.js"></script>
+		<style>
+			
+			.table > tbody > tr > td
+			{
+				vertical-align: middle;
+				text-align: center;
+			}
+		
+		</style>
     </head>
-    <body style="background-color:#E6E6FA">
+    <body>
+	
+		<div class="jumbotron" style="background-image: url(https://www.jssor.com/img/1920/purple.jpg)">
+			<div class="container">
+				<div class="page-header" style="color: white; ">
+					<h1>Okazjo-łowca</h1>    
+					<p>Na tej stronie możesz śledzić bieżące okazje w popularnych sklepach internetowych</p>
+				</div>
+			</div>
+		</div>
         <div class="container">
-            <h1>OCCASION FINDER</h1>
 
             <table-data></table-data>
             
