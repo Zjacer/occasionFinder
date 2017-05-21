@@ -1,5 +1,3 @@
-#Okazjo-łowca
-
 # [](#header-1)Przeznaczenie aplikacji Okazjo-łowca
 
 Głównym zadaniem aplikacji jest zbieranie informacji o okazjach (zwykle zwanymi 'Gorący strzał' luib 'Okazja Dnia') z wybranych sklepów internetowych w Polsce i przedstawienie ich użytkownikowi w jednym miejscu. Ma to na celu ułatwić życie użytkownikowi przez zniwelowanie konieczności otwierania kilku zakładek w sklepie, a także zmniejszeniem w związku z tym użycia danych (na przykład gdy ktoś korzysta z internetu mobilnego).
@@ -27,4 +25,4 @@ Dodatkowym narzędziem, o które opiera się aplikacja jest: https://developer.y
 
 # [](#header-1)Podręcznik użytkowania
 
-Ze względu na prostotę użytkowania aplikacji (jedyną interakcją użytkownika jest kliknięcie na przycisk przenoszący do strony sklepu) tworzenie podręcznika użytkownika nie było potrzebne.
+Ze względu na intuicyjność użytkowania aplikacji (jedyną interakcją użytkownika jest kliknięcie na przycisk przenoszący do strony sklepu) tworzenie podręcznika użytkownika nie było potrzebne.
