@@ -14,8 +14,8 @@
             <img src="{{xkomArrayData[0]}}"></img></center></td>
         <td>{{xkomArrayData[2]}}</td>
         <td>{{xkomArrayData[3]}}</td>
-        <td>{{xkomArrayData[4]}} zł</td>
-		<td><button type="button" class="btn btn-success">Przejdź do sklepu</button></td>
+        <td>{{xkomArrayData[4]}}</td>
+		<td><a class="btn btn-success" href="{{xkomArrayData[5]}}">Przejdź do przedmiotu</a></td>
     </tr>
     
     <tr ng-controller="moreleController">
@@ -24,8 +24,18 @@
             <img src="{{moreleModel.ItemSrc}}"></center></td>   
         <td>{{moreleModel.OldPrice}}</td>
         <td>{{moreleModel.NewPrice}}</td>
-        <td>{{moreleModel.Save}} zł</td>
-		<td><a class="btn btn-success" href="{{moreleModel.ItemLink}}">Przejdź do sklepu</a></td>
+        <td>{{moreleModel.Save}}</td>
+		<td><a class="btn btn-success" href="{{moreleModel.ItemLink}}">Przejdź do przedmiotu</a></td>
+    </tr>
+    
+    <tr ng-controller="zadowolenieController">
+        <td><center><a href="https://www.zadowolenie.pl/"><img src="res/logo_zadowolenie.jpg"></img></a></center></td>
+        <td><center>{{zadowolenieArrayData[1]}}<br><br>
+            <img src="{{zadowolenieArrayData[0]}}"></img></center></td>   
+        <td>{{zadowolenieArrayData[2]}}</td>
+        <td>{{zadowolenieArrayData[3]}} PLN</td>
+        <td>{{zadowolenieArrayData[4]}}</td>
+        <td><a class="btn btn-success" href="{{zadowolenieArrayData[5]}}">Przejdź do przedmiotu</a></td>
     </tr>
     
     <tr ng-controller="altoController">
@@ -34,8 +44,8 @@
             <img src="{{altoArrayData[0]}}"></img><center></td>   
         <td>{{altoArrayData[2]}}</td>
         <td>{{altoArrayData[3]}}</td>
-        <td>{{altoArrayData[4]}} zł</td>
-		<td><button type="button" class="btn btn-success">Przejdź do sklepu</button></td>
+        <td>{{altoArrayData[4]}}</td>
+		<td><a class="btn btn-success" href="{{altoArrayData[5]}}">Przejdź do przedmiotu</a></td>
     </tr>
     
     <tr ng-controller="amforaController">
@@ -44,7 +54,7 @@
             <img src="{{amforaArrayData[0]}}"></img></center></td>   
         <td>{{amforaArrayData[2]}}</td>
         <td>{{amforaArrayData[3]}}</td>
-        <td>{{amforaArrayData[4]}} zł</td>
-		<td><button type="button" class="btn btn-success">Przejdź do sklepu</button></td>
+        <td>{{amforaArrayData[4]}}</td>
+		<td><a class="btn btn-success" href="{{amforaArrayData[5]}}">Przejdź do przedmiotu</a></td>
     </tr>
 </table>
