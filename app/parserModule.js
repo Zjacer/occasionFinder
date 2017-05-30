@@ -1,4 +1,4 @@
-function calculateReduction(originalPrice, reducedPrice) {
+﻿function calculateReduction(originalPrice, reducedPrice) {
     if (originalPrice == "BRAK DANYCH" || reducedPrice == "BRAK DANYCH")
         return "BRAK DANYCH";
     
@@ -24,7 +24,7 @@ xkomModule = angular.module('occasionProvider', []);
 // X-KOM.PL
 xkomData = angular.module('occasionProvider');
 xkomData.controller('xkomController', function($scope, $http) {
-    $scope.xkomArrayData = [];
+    $scope.xkomArrayData = ["BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH"];
     
     $http({
         method: 'GET',
@@ -69,7 +69,7 @@ moreleData.controller('moreleController', function($scope, $http) {
 		var productDescription = productModel.div[1];
 		var productPrice = productModel.div[2].div;
 		var startIndexUrl = imgModel.style.indexOf("https");
-		var endIndexUrl = imgModel.style.indexOf("jpg") + 3;
+		var endIndexUrl = (imgModel.style.indexOf("jpg") == 1) ? imgModel.style.indexOf("jpg") + 3 : imgModel.style.indexOf("jpeg") + 4;
 		
 		
 		$scope.moreleModel = {
@@ -86,7 +86,7 @@ moreleData.controller('moreleController', function($scope, $http) {
 // ZADOWOLENIE.PL
 zadowolenieData = angular.module('occasionProvider');
 zadowolenieData.controller('zadowolenieController', function($scope, $http) {
-    $scope.zadowolenieArrayData = [];
+    $scope.zadowolenieArrayData = ["BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH"];
     
     $http({
         method: 'GET',
@@ -107,7 +107,7 @@ zadowolenieData.controller('zadowolenieController', function($scope, $http) {
 // AL.TO
 altoData = angular.module('occasionProvider');
 altoData.controller('altoController', function($scope, $http) {
-    $scope.altoArrayData = [];
+    $scope.altoArrayData = ["BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH"];
     
     $http({
         method: 'GET',
@@ -140,7 +140,7 @@ altoData.controller('altoController', function($scope, $http) {
 // AMFORA.PL
 amforaData = angular.module('occasionProvider');
 amforaData.controller('amforaController', function($scope, $http) {
-    $scope.amforaArrayData = [];
+    $scope.amforaArrayData = ["BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH", "BRAK DANYCH"];
     
     $http({
         method: 'GET',
@@ -151,7 +151,7 @@ amforaData.controller('amforaController', function($scope, $http) {
         
         $scope.imgUrl = $scope.amforaData.div["0"].div.a.style;
         $scope.urlStart = $scope.imgUrl.indexOf("https");
-        $scope.urlEnd = $scope.imgUrl.indexOf("jpeg") + 4;
+        $scope.urlEnd = ($scope.imgUrl.indexOf("jpg") == 1) ? $scope.imgUrl.indexOf("jpg") + 3 : $scope.imgUrl.indexOf("jpeg") + 4;
         
         $scope.amforaArrayData[0] = $scope.imgUrl.substring($scope.urlStart, $scope.urlEnd);
         $scope.amforaArrayData[1] = $scope.amforaData.div[1].div["0"].a.title
