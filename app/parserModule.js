@@ -69,7 +69,7 @@ moreleData.controller('moreleController', function($scope, $http) {
 		var productDescription = productModel.div[1];
 		var productPrice = productModel.div[2].div;
 		var startIndexUrl = imgModel.style.indexOf("https");
-		var endIndexUrl = (imgModel.style.indexOf("jpg") == 1) ? imgModel.style.indexOf("jpg") + 3 : imgModel.style.indexOf("jpeg") + 4;
+		var endIndexUrl = (imgModel.style.indexOf("jpg") !== 0) ? imgModel.style.indexOf("jpg") + 3 : imgModel.style.indexOf("jpeg") + 4;
 		
 		
 		$scope.moreleModel = {
@@ -151,7 +151,7 @@ amforaData.controller('amforaController', function($scope, $http) {
         
         $scope.imgUrl = $scope.amforaData.div["0"].div.a.style;
         $scope.urlStart = $scope.imgUrl.indexOf("https");
-        $scope.urlEnd = ($scope.imgUrl.indexOf("jpg") == 1) ? $scope.imgUrl.indexOf("jpg") + 3 : $scope.imgUrl.indexOf("jpeg") + 4;
+        $scope.urlEnd = ($scope.imgUrl.indexOf("jpg") !== 0) ? $scope.imgUrl.indexOf("jpg") + 3 : $scope.imgUrl.indexOf("jpeg") + 4;
         
         $scope.amforaArrayData[0] = $scope.imgUrl.substring($scope.urlStart, $scope.urlEnd);
         $scope.amforaArrayData[1] = $scope.amforaData.div[1].div["0"].a.title
